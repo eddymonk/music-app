@@ -1,0 +1,19 @@
+{
+  "name": "create-react-app-music",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"yarn dev:main-app\" \"yarn dev:albums-photos-app\" \"yarn dev:recent-photos-app\"",
+    "dev:main-app": "yarn workspace main-app start",
+    "dev:albums-photos-app": "yarn workspace albums-photos-app start",
+    "dev:recent-photos-app": "yarn workspace recent-photos-app start"
+  },
+  "workspaces": [
+    "apps/*"
+  ],
+  "dependencies": {
+    "concurrently": "^6.3.0",
+    "cross-env": "^7.0.3",
+    "styled-components": "^6.1.11"
+  }
+}
